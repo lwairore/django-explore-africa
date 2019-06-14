@@ -8,3 +8,8 @@ class LocationTestCase(TestCase):
 
     def test_instance(self):
         self.assertTrue(isinstance(self.nakuru, Location))
+
+    def test_save_method(self):
+        self.nakuru.save_location()
+        locations = Location.objects.all()
+        self.assertTrue(len(editors) > 0)
