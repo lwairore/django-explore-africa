@@ -5,4 +5,6 @@ from .models import Location, Category, Image
 class LocationTestCase(TestCase):
     def setUp(self):
         self.nakuru = Location(name='Nakuru')
-        
+
+    def test_instance(self):
+        self.assertTrue(isinstance(self.nakuru, Location))
