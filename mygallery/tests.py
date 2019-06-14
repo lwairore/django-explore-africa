@@ -12,4 +12,9 @@ class LocationTestCase(TestCase):
     def test_save_method(self):
         self.nakuru.save_location()
         locations = Location.objects.all()
-        self.assertTrue(len(editors) > 0)
+        self.assertTrue(len(locations) > 0)
+    
+    def test_update_single_location(self):
+        self.nakuru.save_location()
+        self.assertEquals(Location.objects.filter(name='Nakuru').update(name='Nakuru West'), 1)
+        
