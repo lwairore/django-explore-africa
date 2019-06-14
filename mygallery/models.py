@@ -10,4 +10,4 @@ class Category(models.Model):
 class Image(models.Model):
     name = models.CharField(max_length=30)
     description = models.TextField()
-    
+    location = models.ForeignKey(Location)
