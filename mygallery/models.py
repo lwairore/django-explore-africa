@@ -43,4 +43,8 @@ class Image(models.Model):
         images = cls.objects.filter(location=location)
         return images
 
+    @classmethod
+    def search_image(cls, category):
+        image = cls.objects.filter(category=category)
+        return image
     
