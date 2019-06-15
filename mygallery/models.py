@@ -3,6 +3,9 @@ from django.db import models
 # Create your models here.
 class Location(models.Model):
     name = models.CharField(max_length=100, default='SOME STRING')
+    def __str__(self):
+        return self.name
+
     def save_location(self):
         self.save()
 
@@ -12,6 +15,9 @@ class Location(models.Model):
 
 class Category(models.Model):
     name = models.CharField(max_length=30, default='SOME STRING')
+    def __str__(self):
+        return self.name
+    
     def save_category(self):
         self.save()
     
@@ -23,6 +29,9 @@ class Image(models.Model):
     description = models.TextField()
     location = models.ForeignKey(Location,default=1)
     category = models.ForeignKey(Category, default=1)
+    def __str__(self):
+        return self.name
+
     def save_image(self):
         self.save()
 
