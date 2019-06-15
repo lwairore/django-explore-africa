@@ -29,11 +29,18 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
-    @classmethod
-    def update_image(cls):
-        cls.objects.filter(name='Tourism').update(name='image')
+    # @classmethod
+    # def update_image(cls):
+    #     cls.objects.filter(name='Tourism').update(name='image')
 
     @classmethod
     def get_image_by_id(cls, id):
         image = cls.objects.filter(id=id)
         return image
+
+    @classmethod
+    def filter_by_location(cls, location):
+        images = cls.objects.filter(location=location)
+        return images
+
+    
