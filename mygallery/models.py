@@ -29,6 +29,7 @@ class Image(models.Model):
     description = models.TextField()
     location = models.ForeignKey(Location,default=1)
     category = models.ForeignKey(Category, default=1)
+    image_locale = models.ImageField(upload_to='images/')
     def __str__(self):
         return self.name
 
