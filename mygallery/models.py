@@ -9,9 +9,15 @@ class Location(models.Model):
         return self.name
 
     def save_location(self):
+        """
+            This method calls save manager on an instance of Location so as to add it in the database.
+        """
         self.save()
 
     def delete_location(self):
+        """
+            This method calls delete manager on any instance of Location so as to remove from the database.
+        """ 
         self.delete()
 
 
