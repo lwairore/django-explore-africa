@@ -15,15 +15,21 @@ class Location(models.Model):
         self.delete()
 
 
-class Category(models.Model):
+class Category(models.Model): 
     name = models.CharField(max_length=30, default='SOME STRING')
     def __str__(self):
         return self.name
     
     def save_category(self):
+         """
+            Method calls save method on an Category instance to save it to the database.
+        """
         self.save()
     
     def delete_category(self):
+        """
+            This method uses delete manager to delete records of categories in the database.
+        """
         self.delete()
 
 
