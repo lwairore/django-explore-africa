@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,17 @@
 <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
 <!-- Material Design Bootstrap -->
 <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+
 </head>
 <body>
+        
+    {% include 'layout/navbar.html' %}
+    <div class="alert alert-warning alert-dismissible fade show test_alert fixed-bottom" role="alert" style="display:none;" >
+            <strong>Link successfully copied</strong> 
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
     {% block content %}
 
     {% endblock %}
@@ -26,5 +36,22 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
 <!-- MDB core JavaScript -->
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/js/mdb.min.js"></script>
+<script>
+        $('.carousel').carousel({
+          interval: 3000,
+        })
+
+        
+      </script>
+      <script>
+            $(document).ready(function() {
+          $(".btn_toggle").click(function() {
+            $(".test_alert").toggle();
+          });
+        });
+            </script>
+    
+    
+   
 </body>
 </html>
