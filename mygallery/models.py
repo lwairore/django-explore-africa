@@ -1,5 +1,6 @@
 from django.db import models
 
+
 # Create your models here.
 class Location(models.Model):
     name = models.CharField(max_length=100, default='SOME STRING')
@@ -24,12 +25,13 @@ class Category(models.Model):
     def delete_category(self):
         self.delete()
 
+
 class Image(models.Model):
     name = models.CharField(max_length=30, default='SOME STRING')
     description = models.TextField()
     location = models.ForeignKey(Location,default=1)
     category = models.ForeignKey(Category, default=1)
-    image_locale = models.ImageField(upload_to='images/')
+    image_locale = models.ImageField(upload_to='images/', default='/home/karangu/Desktop/Gallery/media')
     def __str__(self):
         return self.name
 
@@ -39,9 +41,6 @@ class Image(models.Model):
     def delete_image(self):
         self.delete()
 
-    # @classmethod
-    # def update_image(cls):
-    #     cls.objects.filter(name='Tourism').update(name='image')
 
     @classmethod
     def get_image_by_id(cls, id):
@@ -57,4 +56,7 @@ class Image(models.Model):
     def search_image(cls, category):
         image = cls.objects.filter(category=category)
         return image
+    
+    class Meta:
+        ordering = ['name']
     
