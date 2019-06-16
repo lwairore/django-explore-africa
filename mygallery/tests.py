@@ -3,6 +3,14 @@ from .models import Location, Category, Image
 
 # Create your tests here.
 class LocationTestCase(TestCase):
+    """
+        This testcase:
+            1. Defines setUp method that initializes Location instance,self.nakuru, that will be used a test instance.
+            2. Defines test_instance method that tests if the instances created by the setUp method is an instance of Location.
+            3. Defines test_save_method method that tests the save_location method to assertain that it is capable of adding an instance to the database.
+            4. Defines test_update_single_location method tests the update manager.
+            5. Defines test_delete_method that tests the delete_location method
+    """
     def setUp(self):
         self.nakuru = Location(name='Nakuru')
 
@@ -81,12 +89,6 @@ class ImageTestCase(TestCase):
         self.image.save_image()
         images = Image.objects.all()
         self.assertTrue(len(images) > 0)
-    
-    # def test_update_single_category(self):
-    #     self.image.save_image()
-    #     image_change = Image.update_image()
-    #     self.assertEquals(image_change, 1)
-
     def test_delete_method(self):
         self.image.save_image()
         self.image.delete_image()

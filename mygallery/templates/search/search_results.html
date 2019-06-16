@@ -51,7 +51,7 @@
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                             <!-- <button type="button" class="btn btn-sm btn-outline-secondary">View</button> -->
-                            <button type="button" class="btn btn-sm btn-outline-secondary">Edit</button>
+                            <button type="button" name="button" class=" btn_toggle btn btn-sm btn-outline-secondary" value="{{j.image_locale.url}}" onclick="copylink(this.value)">Copy Image Link</button>
                         </div>
 
                     </div>
@@ -66,5 +66,21 @@
         {% endfor %}
     </div>
 </div>
+
+
+
+<script>
+        function copylink(value) {
+          function handler(event){
+              event.clipboardData.setData('text/plain', value);
+              event.preventDefault();
+              document.removeEventListener('copy', handler, true);
+          }
+          document.addEventListener('copy', handler, true);
+          document.execCommand('copy');
+          
+        }
+      
+        </script>
 
 {% endblock %}
