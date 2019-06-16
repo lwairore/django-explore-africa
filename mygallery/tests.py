@@ -37,10 +37,11 @@ class CategoryTestCase(TestCase):
     """
         This testcase:
             1. Defines setUp method that initializes Category instance,self.travel, that will be used a test instance.
-            2. Defines test_instance method that tests if the instances created by the setUp method is an instance of Category.
-            3. Defines test_save_method method that tests the save_category method to assertain that it is capable of adding an instance to the database.
-            4. Defines test_update_single_category method tests the update manager.
-            5. Defines test_delete_method that tests the delete_category method    
+            2. Defines a tearDown method that deletes all Category and Location instances
+            3. Defines test_instance method that tests if the instances created by the setUp method is an instance of Category.
+            4. Defines test_save_method method that tests the save_category method to assertain that it is capable of adding an instance to the database.
+            5. Defines test_update_single_category method tests the update manager.
+            6. Defines test_delete_method that tests the delete_category method    
     """
     
     def setUp(self):
@@ -77,6 +78,18 @@ class CategoryTestCase(TestCase):
 
 
 class ImageTestCase(TestCase):
+    """
+        This testcase:
+            1. Defines setUp method that initializes Image instance,self.image, self.travel, self.nakuru that will be used a test instance.
+            2. Defines tearDown method that deletes Image, Location, Category instances.
+            3. Defines test_instance method that tests if the instances created by the setUp method is an instance of Image.
+            4. Defines test_save_method method that tests the save_image method to assertain that it is capable of adding an instance to the database.
+            5. Defines test_delete_method that tests the delete_image method
+            6. Defines test_get_image_id that tests get_image_by_id method.
+            7. Defines test_filter_by_location that tests filter_by_location.
+            8. Defines test_search_image that tests search_image method.
+    
+    """
     def setUp(self):
         self.travel = Category(name='Tourism', id=1)
         self.nakuru = Location(name='Nakuru', id=1)
