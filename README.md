@@ -15,10 +15,10 @@ Photos are divided into eighty(8) categories:
 8. Wildlife photos
 
 #### Preview 
-##### [Homepage]()
-![Screenshot](media/images/Screenshot_from_2019-03-19_10-23-15.png)
-##### [Search-results]()
-![Screenshot](media/images/Screenshot_from_2019-03-19_10-23-15.png)
+##### [Homepage](https://mygallery-mo.herokuapp.com/)
+![Screenshot](home_page.png)
+##### [Search-results](https://mygallery-mo.herokuapp.com/search/?category=wildlife)
+![Screenshot](search_results.png)
 
 
 ## BEHAVIOUR DRIVEN DEVELOPMENT (BDD)
