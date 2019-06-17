@@ -27,7 +27,7 @@ class Category(models.Model):
         return self.name
     
     def save_category(self):
-         """
+        """
             Method calls save method on an Category instance to save it to the database.
         """
         self.save()

@@ -26,6 +26,10 @@
                 <h2 class="mb-5 font-weight-bold text-center">Gallery</h2>
             <hr class="my-5">
         </div>
+        
+
+
+
         {% for image in images %}
 
 
@@ -61,9 +65,12 @@
                 </div>
             </div>
 
+
+
             {%  if forloop.counter|divisibleby:3 or forloop.last %}</div>{%  endif %}
 
         {%  endfor %}
+        
         <section id="gallery">
     
                 <!-- Heading -->
