@@ -72,7 +72,7 @@
 <script>
         function copylink(value) {
           function handler(event){
-              event.clipboardData.setData('text/plain', value);
+              event.clipboardData.setData('text/plain', 'https://mygallery-mo.herokuapp.com'+value);
               event.preventDefault();
               document.removeEventListener('copy', handler, true);
           }
