@@ -1,3 +1,4 @@
+
 """
 Django settings for gallery project.
 
@@ -14,18 +15,10 @@ import os
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
-
-
-
-
-
-# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=False, cast=bool)
-# development
+# development(
 if config('MODE')=="dev":
    DATABASES = {
        'default': {
@@ -42,24 +35,26 @@ if config('MODE')=="dev":
 else:
    DATABASES = {
        'default': dj_database_url.config(
-           default=config('DATABASE_URL')
+           default='postgres://karangu:lmzongolo8754@localhost/gallery'
        )
    }
 
 db_from_env = dj_database_url.config(conn_max_age=500)
 DATABASES['default'].update(db_from_env)
 
+ALLOWED_HOSTS = config('ALLOWED_HOSTS', cast=Csv())
+# Build paths inside the project like this: os.path.join(BASE_DIR, ...)
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = '51h4+%bcpk*f*9(c9+@a(3fg5!t5ttxv=s6a1-hkkhvsl1ajvp'
+# SECRET_KEY = 'ifz9jv-9wnk%z)rz+o947&o5c*u!l04aw#7byq9xm2ar)5lqp$'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# DEBUG = True
-
-
+DEBUG = True
 
 ALLOWED_HOSTS = []
 
@@ -67,13 +62,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'mygallery',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'mygallery'
+   
+
 ]
 
 MIDDLEWARE = [
@@ -85,6 +82,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
+    
 ]
 
 ROOT_URLCONF = 'gallery.urls'
@@ -96,15 +94,18 @@ TEMPLATES = [
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
+              
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
-                'django.template.context_processors.media',
+                'django.template.context_processors.media'
             ],
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'gallery.wsgi.application'
 
@@ -115,9 +116,9 @@ WSGI_APPLICATION = 'gallery.wsgi.application'
 # DATABASES = {
 #     'default': {
 #         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'gallery',
+#         'NAME': 'gallery2',
 #         'USER': 'karangu',
-#         'PASSWORD': 'lmzongolo8754',
+#         'PASSWORD': 'lmzongolo8754'
 #     }
 # }
 
@@ -158,13 +159,14 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
-MEDIA_URL = '/media/'
-MEDIA_ROOT =os.path.join(BASE_DIR, 'media')
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATIC_URL = '/static/'
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static'),
 ]
+
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
