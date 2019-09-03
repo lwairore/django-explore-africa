@@ -15,10 +15,10 @@ Photos are divided into eighty(8) categories:
 8. Wildlife photos
 
 #### Preview 
-##### [Homepage]()
-![Screenshot](media/images/Screenshot_from_2019-03-19_10-23-15.png)
-##### [Search-results]()
-![Screenshot](media/images/Screenshot_from_2019-03-19_10-23-15.png)
+##### [Homepage](https://mygallery-mo.herokuapp.com/)
+![Screenshot](home_page.png)
+##### [Search-results](https://mygallery-mo.herokuapp.com/search/?category=wildlife)
+![Screenshot](search_results.png)
 
 
 ## BEHAVIOUR DRIVEN DEVELOPMENT (BDD)
@@ -185,7 +185,7 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 Django checks if there are any errors in your program then start a development server at localhost port `8000`. If everything works you should see the MyGallery homepage.
-![Screenshot](media/images/Screenshot_from_2019-03-19_10-23-15.png)
+![Screenshot](home_page.png)
 
 ## Browsers supported 
 1. [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
