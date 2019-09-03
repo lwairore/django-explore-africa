@@ -40,8 +40,9 @@ li:hover {
 
         {% for image in images %}
 
-
-        {% if forloop.counter0|divisibleby:3 %} <div class="row text-center"> {%  endif %}
+        <div class="card-columns">
+          <div class="card">
+        
 
             <div class="col-md-4" style="cursor: pointer">
                 <div class="card mb-4 shadow-sm">
@@ -72,10 +73,12 @@ li:hover {
                     </div>
                 </div>
             </div>
+            </div>
+            </div>
 
 
 
-            {%  if forloop.counter|divisibleby:3 or forloop.last %}</div>{%  endif %}
+            
 
         {%  endfor %}
         
