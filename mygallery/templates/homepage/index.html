@@ -3,23 +3,31 @@
 {% block content %}
 {{block.super}}
 
+<style>
+li:hover {
+  color: #607D8B;
+  background-color: #DDD;
+  left: .1em;
+}
+</style>
+
 <div class="album py-5 bg-light">
     
     
     <div class="container">
-        <div class="card" style="width: 18rem;">
+        <div class="card" style="width: 18rem;" id="categories-toggle">
             <div class="card-header">
               Categories
             </div>
-            <ul class="list-group list-group-flush">
-              <li class="list-group-item">Abstract</li>
-              <li class="list-group-item">Aerial</li>
-              <li class="list-group-item">Architectural</li>
-              <li class="list-group-item">Landscape</li>
-              <li class="list-group-item">Potrait</li>
-              <li class="list-group-item">Sports</li>
-              <li class="list-group-item">Wedding</li>
-              <li class="list-group-item">Wildlife</li>
+            <ul class="list-group list-group-flush"  style="display: none;" id="categories-show">
+              <li class="list-group-item" style="cursor: pointer">Abstract</li>
+              <li class="list-group-item" style="cursor: pointer">Aerial</li>
+              <li class="list-group-item" style="cursor: pointer">Architectural</li>
+              <li class="list-group-item" style="cursor: pointer">Landscape</li>
+              <li class="list-group-item" style="cursor: pointer">Potrait</li>
+              <li class="list-group-item" style="cursor: pointer">Sports</li>
+              <li class="list-group-item" style="cursor: pointer">Wedding</li>
+              <li class="list-group-item" style="cursor: pointer">Wildlife</li>
             </ul>
           </div>
         <div class="text-center">
@@ -162,6 +170,8 @@
       document.execCommand('copy');
       
     }
+
+    
   
     </script>
 
