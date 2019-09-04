@@ -1,24 +1,11 @@
-## MyGallery
-MyGallery provides high quality and completely free stock photos. All photos are nicely tagged, and searchable.
+## ExploreAfrica
+ExploreAfrica provides high quality and completely free stock photos showcasing the beauty of Africa.
 
-#### Photos
-I have sixty nine free photos and every week high resolution photos will be added. 
-
-Photos are divided into eighty(8) categories:
-1. Abstract photos
-2. Aerial photos
-3. Architectural photos
-4. Landscape photos
-5. Potrait photos
-6. Sports photos
-7. Wedding photos
-8. Wildlife photos
 
 #### Preview 
-##### [Homepage](https://mygallery-mo.herokuapp.com/)
-![Screenshot](home_page.png)
-##### [Search-results](https://mygallery-mo.herokuapp.com/search/?category=wildlife)
-![Screenshot](search_results.png)
+##### [Homepage](https://explorekenya.herokuapp.com/)
+![Screenshot](./static/homepage/explore_kenya.png)
+
 
 
 ## BEHAVIOUR DRIVEN DEVELOPMENT (BDD)
@@ -184,8 +171,8 @@ Django version 1.11.5, using settings 'heyapp.settings'
 Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
-Django checks if there are any errors in your program then start a development server at localhost port `8000`. If everything works you should see the MyGallery homepage.
-![Screenshot](home_page.png)
+Django checks if there are any errors in your program then start a development server at localhost port `8000`. If everything works you should see the ExploreAfrica homepage.
+![Screenshot](./static/homepage/explore_kenya.png)
 
 ## Browsers supported 
 1. [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
@@ -202,7 +189,6 @@ Django checks if there are any errors in your program then start a development s
 
 ## Technologies used
 1. [Django v1.11](https://www.djangoproject.com/) - To handle routing and navigation.
-2. [MDB v.4.8.2](https://mdbootstrap.com) - To create an intuitive and simple responsive UI elements.
 
 ## FEEDBACK
 Your opinion matters. 
@@ -215,7 +201,7 @@ Email - (https://kwairore@gmail.com)
 Github username - [lwairore](https://www.github.com/lwairore)
 
 ## Team
-MyGallery is run by Karangu Lucas Wairore, fullstack developer.
+ExploreAfrica is run by Karangu Lucas Wairore, fullstack developer.
 
 MIT License
 
