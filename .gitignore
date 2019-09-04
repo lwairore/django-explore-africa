@@ -4,3 +4,5 @@ virtual/
 .vscode/*
 __pycache__/
 db.sqlite3
+samples/
+mygallery/migrations/
