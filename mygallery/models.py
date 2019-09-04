@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Location(models.Model):
 
-    name = models.CharField(max_length=100, default='SOME STRING')
+    name = models.CharField(max_length=100, default='Add a Country in Africa')
     def __str__(self):
         return self.name
 
@@ -22,7 +22,7 @@ class Location(models.Model):
 
 
 class Category(models.Model): 
-    name = models.CharField(max_length=30, default='SOME STRING')
+    name = models.CharField(max_length=30, default='Add a Category of Image')
     def __str__(self):
         return self.name
     
@@ -40,11 +40,16 @@ class Category(models.Model):
 
 
 class Image(models.Model):
-    name = models.CharField(max_length=30, default='SOME STRING')
+    name = models.CharField(max_length=50, default='SOME STRING')
     description = models.TextField()
     location = models.ForeignKey(Location,default=1)
     category = models.ForeignKey(Category, default=1)
     image_locale = models.ImageField(upload_to='images/', default='/home/karangu/Desktop/Gallery/media')
+    specific_location = models.CharField(max_length=50, default='SPECIFIC LOCATION NOT PROVIDED!')
+    photo_source_owner = models.CharField(max_length=50, default="False")
+    photo_source_website_name = models.CharField(max_length=50, default="False")
+    photo_source_website_link = models.CharField(max_length=1000, default="False")
+    
     def __str__(self):
         return self.name
 
@@ -88,3 +93,8 @@ class Image(models.Model):
     class Meta:
         ordering = ['name']
     
+class AboutMe(models.Model):
+    body = models.TextField()
+
+    def __str__(self):
+        return self.body
