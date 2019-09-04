@@ -110,17 +110,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'gallery.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
-
-# DATABASES = {
-#     'default': {
-#         'ENGINE': 'django.db.backends.postgresql',
-#         'NAME': 'gallery2',
-#         'USER': 'karangu',
-#         'PASSWORD': 'lmzongolo8754'
-#     }
-# }
 
 
 # Password validation
