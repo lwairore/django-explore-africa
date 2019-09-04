@@ -1,20 +1,19 @@
 {% load static %}
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>ExploreAfrica * Free Stock Photos</title>
-    <!-- Font Awesome -->
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
-<!-- Bootstrap core CSS -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
-<!-- Material Design Bootstrap -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.2/css/mdb.min.css" rel="stylesheet">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-</head>
-<body>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <title>ExploreAfrica * Free Stock Photos</title>
+    <link rel="stylesheet" href="{% static 'css/other.css' %}">
+    <link href="{% static 'css/album.css' %}" rel="stylesheet">
+  </head>
+  <body>
         
     {% include 'layout/navbar.html' %}
     <div class="alert alert-warning alert-dismissible fade show test_alert fixed-bottom" role="alert" style="display:none;" >
@@ -23,9 +22,10 @@
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
-    {% block content %}
-
-    {% endblock %}
+    <main>
+          {% block content %} {% endblock %}
+    </main>
+      {% include 'layout/footer.html' %}
 
 
     <!-- JQuery -->
@@ -51,6 +51,7 @@
           $("#categories-toggle").hover(function() {$("#categories-show").toggle()})
         });
 
+        $("#dropdownMenuLink-initiate").hover(function(){$(".dropdown-menu").toggle()})
 
             </script>
     
