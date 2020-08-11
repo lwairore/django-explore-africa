@@ -1,18 +1,27 @@
-## ExploreAfrica
-ExploreAfrica provides high quality and completely free stock photos showcasing the beauty of Africa.
+## Django Explore Africa
+Django Explore Africa is my personal gallery application that displays high quality and completely free stock photos showcasing the beauty of Africa.
 
 
 #### Preview 
 ##### [Homepage](https://explorekenya.herokuapp.com/)
-![Screenshot](./static/homepage/explore_kenya.png)
+![Landing page for Django Explore Africa](./static/homepage/explore_kenya.png)
 
 
+## Features
+1. View different photos
+1. Copy a link to the photo to share with friends
+1. View photos based on the location they were taken
+1. Application is accessible to users on both **desktop** and **mobile** formats. Django Explore Africa uses [Bootstrap](http://getbootstrap.com/) framework to ensure its responsive to different screen sizes.
 
-## BEHAVIOUR DRIVEN DEVELOPMENT (BDD)
-Behaviour                                   | Input                                                                          | Output                                        |
---------------------------------------------|--------------------------------------------------------------------------------|----------------------------------------------|
-Search for different categories of photos   | Click the search form, enter a category you would like to get, eg `Landscape`. |  Hit the `ENTER` keyboard button               | Search results: all images that have are in category `Landscape`               |
-Copy a link to the photo onto the clipboard | Cick on the `Copy image link` button                                           | The image link is copied to the clipboard.         |
+# Demo
+Here is a working live demo: https://explorekenya.herokuapp.com/
+
+## Site
+## Landing Page
+
+![Landing page for Django Explore Africa](./static/homepage/explore_kenya.png)
+
+
 
 ## Installation
 #### Clone gallery repository
@@ -174,38 +183,42 @@ Quit the server with CONTROL-C.
 Django checks if there are any errors in your program then start a development server at localhost port `8000`. If everything works you should see the ExploreAfrica homepage.
 ![Screenshot](./static/homepage/explore_kenya.png)
 
-## Browsers supported 
-1. [Google Chrome](https://en.wikipedia.org/wiki/Google_Chrome)
-2. [Mozilla Firefox](https://en.wikipedia.org/wiki/Mozilla_Firefox)
-3. [Internet Exploer](https://en.wikipedia.org/wiki/Internet_Explorer)
-4. [Safari](https://en.wikipedia.org/wiki/Safari_(web_browser))
-5. [Microsoft Edge](https://en.wikipedia.org/wiki/Microsoft_Edge)
-6. [Opera](https://en.wikipedia.org/wiki/Opera_(web_browser))
-7. [UC Browser](https://en.wikipedia.org/wiki/UC_Browser)
-8. [Yandex Browser](https://en.wikipedia.org/wiki/Yandex_Browser)
-9. [Chromium](https://en.wikipedia.org/wiki/Chromium_(web_browser))
-10. [Sogou Explorer](https://en.wikipedia.org/wiki/Sogou)
-11. [QQ Browser](https://en.wikipedia.org/w/index.php?title=QQ_Browser&action=edit&redlink=1)
+# [Usage](https://explorekenya.herokuapp.com/)
+
+## Development
+Want to contribute? Great!
+
+To fix a bug or enhance an existing module, follow these steps:
+
+- Fork the repo
+- Create a new branch (`git checkout -b improve-feature`)
+- Make the appropriate changes in the files
+- Add changes to reflect the changes made
+- Commit your changes (`git commit -am 'Improve feature'`)
+- Push to the branch (`git push origin improve-feature`)
+- Create a Pull Request
+
+## Bug / Feature Request
+If you find a bug, kindly open an issue [here](https://github.com/lwairore/django-explore-africa/issues/new).
+
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/lwairore/django-explore-africa/issues/new).
+
 
 ## Technologies used
-1. [Django v1.11](https://www.djangoproject.com/) - To handle routing and navigation.
-
-## FEEDBACK
-Your opinion matters. 
-Have some ideas how to improve my product?
-Ping me at https://github.com/lwairore/feedback
+1. [Django v1.11](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source. 
+1. [Bootstrap](https://getbootstrap.com/) - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 
 ## Contact Information
-Email - (https://kwairore@gmail.com)
+Email - (kwairore@gmail.com)
 
 Github username - [lwairore](https://www.github.com/lwairore)
 
 ## Team
-ExploreAfrica is run by Karangu Lucas Wairore, fullstack developer.
+[Karangu Lucas Wairore](https://github.com/lwairore), fullstack developer.
 
 MIT License
 
-Copyright (c) 2019 Karangu Lucas Wairore
+Copyright (c) 2019 [Karangu Lucas Wairore](https://github.com/lwairore)
 
 
 
