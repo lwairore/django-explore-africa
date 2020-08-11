@@ -205,6 +205,8 @@ If you'd like to request a new function, feel free to do so by opening an issue 
 
 
 ## Technologies used
+1. Pen and Paper - For Mockup design.
+1. [Coolors](https://coolors.co/) -  For Color scheme generation
 1. [Django v1.11](https://www.djangoproject.com/) - Django is a high-level Python Web framework that encourages rapid development and clean, pragmatic design. Built by experienced developers, it takes care of much of the hassle of Web development, so you can focus on writing your app without needing to reinvent the wheel. It's free and open source. 
 1. [Bootstrap](https://getbootstrap.com/) - Bootstrap is a free and open-source CSS framework directed at responsive, mobile-first front-end web development.
 
